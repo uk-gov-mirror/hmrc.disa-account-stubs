@@ -1,3 +1,9 @@
 # microservice specific routes
 
 GET     /etmp/registration/:zref    uk.gov.hmrc.disaaccountstubs.controllers.EtmpController.retrieveRegistrationDetails(zref: String)
+
+## Email verification
+
+POST    /email-verification/v2/send-code   uk.gov.hmrc.disaaccountstubs.controllers.EmailVerificationController.sendCode()
+
+POST    /email-verification/v2/verify-code uk.gov.hmrc.disaaccountstubs.controllers.EmailVerificationController.verifyCode()

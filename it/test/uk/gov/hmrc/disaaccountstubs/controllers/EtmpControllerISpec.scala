@@ -49,7 +49,7 @@ class EtmpControllerISpec
 
       val response =
         httpClient
-          .get(url"$baseUrl/disa-account-stubs/etmp/registration/$zref")(HeaderCarrier())
+          .get(url"$baseUrl/etmp/registration/$zref")(HeaderCarrier())
           .execute[RegistrationDetails]
           .futureValue
 
@@ -58,7 +58,7 @@ class EtmpControllerISpec
     "respond with 404 when the zref is the not-found stub value" in:
       val response =
         httpClient
-          .get(url"$baseUrl/disa-account-stubs/etmp/registration/Z0404")(HeaderCarrier())
+          .get(url"$baseUrl/etmp/registration/Z0404")(HeaderCarrier())
           .execute[HttpResponse]
           .futureValue
 

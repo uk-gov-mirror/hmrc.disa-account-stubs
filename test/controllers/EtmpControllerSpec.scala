@@ -16,15 +16,13 @@
 
 package controllers
 
-import org.scalatest.matchers.must.Matchers
-import org.scalatest.wordspec.AnyWordSpec
-import org.scalatestplus.play.guice.GuiceOneAppPerSuite
 import play.api.test.FakeRequest
 import play.api.test.Helpers.*
 import uk.gov.hmrc.disaaccountstubs.controllers.routes.EtmpController
 import uk.gov.hmrc.disaaccountstubs.models.registrationDetails.RegistrationDetails
+import utils.BaseUnitSpec
 
-class EtmpControllerSpec extends AnyWordSpec with Matchers with GuiceOneAppPerSuite {
+class EtmpControllerSpec extends BaseUnitSpec {
 
   "EtmpController.retrieveRegistrationDetails" should {
 
